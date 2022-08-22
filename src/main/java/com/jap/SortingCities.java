@@ -18,6 +18,11 @@ public class SortingCities {
 
     // Create a method to convert the city names in uppercase
 
+    /**
+     * This function takes an array of strings as an argument and converts each element to upper case.
+     *
+     * @param cityNames This is the array that we want to convert to upper case.
+     */
     public void convertToUpperCase(String[] cityNames) {
         // Start a loop to iterate though the array and convert each element to upper case
         for (int index = 0; index < cityNames.length; index++) {
