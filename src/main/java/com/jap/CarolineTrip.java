@@ -3,7 +3,7 @@ package com.jap;
 
 import java.util.Arrays;
 
-public class SortingCities {
+public class CarolineTrip {
     public static void main(String[] args) {
         // Declare the 2 arrays with city names and distances from Zurich
         String[] cityNames = {"Bern", "Lucerne", "Interlaken", "Grindelwald", "Engelberg", "Geneva", "Murren", "Basel", "Zermatt", "Jungfraujoch"};
@@ -17,15 +17,15 @@ public class SortingCities {
             System.out.println(cityNames[index] + ": " + distanceFromZurich[index] + " kms");
         }
         // Create an object for the method sortBasedOnDistance()
-        SortingCities sortingCities = new SortingCities();
+        CarolineTrip carolineTrip = new CarolineTrip();
         // Call the method to convert the city name to upper case
-        cityNames = sortingCities.convertToUpperCase(cityNames);
+        cityNames = carolineTrip.convertToUpperCase(cityNames);
         // Call the method to sort the distance from Zurich arrays
-        sortingCities.sortBasedOnDistance(cityNames, distanceFromZurich);
+        carolineTrip.sortBasedOnDistance(cityNames, distanceFromZurich);
         // Call the method city52KmFromZurich() and save the return value in a variable
-        String city52KmAwayFromZurich = sortingCities.city52KmFromZurich(cityNames, distanceFromZurich);
+        String city52KmAwayFromZurich = carolineTrip.city52KmFromZurich(cityNames, distanceFromZurich);
         // Call the method cityGreaterThanOrEqualTo270KmFromZurich() to find the city greater than or equal to 270km from Zurich
-        String[] cityGreaterThanOrEqualTo270KmAwayFromZurich = sortingCities.cityGreaterThanOrEqualTo270KmFromZurich(cityNames, distanceFromZurich);
+        String[] cityGreaterThanOrEqualTo270KmAwayFromZurich = carolineTrip.cityGreaterThanOrEqualTo270KmFromZurich(cityNames, distanceFromZurich);
         // Print the sorted distance and corresponding city names on the screen
         // Start a loop to iterate though the arrays and print them
         System.out.println("-------------------------------------");
