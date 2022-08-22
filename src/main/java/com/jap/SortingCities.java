@@ -8,6 +8,10 @@ public class SortingCities {
         // Declare the 2 arrays with city names and distances from Zurich
         String[] cityNames = {"Bern", "Lucerne", "Interlaken", "Grindelwald", "Engelberg", "Geneva", "Murren", "Basel", "Zermatt", "Jungfraujoch"};
         int[] distanceFromZurich = {138, 52, 118, 136, 85, 276, 103, 87, 214, 101};
+        // Create an object for the method sortBasedOnDistance()
+        SortingCities sortingCities = new SortingCities();
+        // Call the method to sort the arrays
+        sortingCities.sortBasedOnDistance(cityNames, distanceFromZurich);
     }
 
     // Create a method to sort the arrays based on the distances
