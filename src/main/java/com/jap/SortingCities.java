@@ -100,6 +100,15 @@ public class SortingCities {
     }
 
     // Create a method to find the city which is more than 270km away from Zurich
+
+    /**
+     * It takes in two arrays as input, one containing the names of cities and the other containing the distance of each
+     * city from Zurich. It returns the name of the first city that is more than 270km away from Zurich
+     *
+     * @param cityNames          An array of city names
+     * @param distanceFromZurich An array of integers that represent the distance of each city from Zurich.
+     * @return The city name that is greater than or equal to 270km away from Zurich
+     */
     public String cityGreaterThanOrEqualTo270KmFromZurich(String[] cityNames, int[] distanceFromZurich) {
         String cityGreaterThanOrEqualTo270KmAwayFromZurich = "";
         // Start a loop to iterate thought the array and find the distance more than or equal to 270km
