@@ -14,6 +14,12 @@ public class SortingCities {
         sortingCities.sortBasedOnDistance(cityNames, distanceFromZurich);
     }
 
+    // Create a method to convert the city names in uppercase
+
+    public void convertToUpperCase(String[] cityNames) {
+
+    }
+
     // Create a method to sort the arrays based on the distances
 
     /**
