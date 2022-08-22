@@ -1,8 +1,5 @@
 package com.jap;
 
-/**
- * Hello world!
- */
 public class SortingCities {
     public static void main(String[] args) {
         // Declare the 2 arrays with city names and distances from Zurich
