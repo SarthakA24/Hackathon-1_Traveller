@@ -82,12 +82,4 @@ public class CarolineTripTest {
         Assertions.assertArrayEquals(expectedCityOutput, cityNames, "There is some error in the logic");
         Assertions.assertArrayEquals(expectedDistanceOutput, distanceFromZurich, "There is some error in the logic");
     }
-
-    // Test case for the method sortBasedOnDistance() to check output for incorrect inputs
-    @Test
-    public void sortBasedOnDistanceFailure() {
-        String[] cityNames = null;
-        carolineTrip.sortBasedOnDistance(cityNames, new int[]{});
-        Assertions.assertNull(cityNames);
-    }
 }
