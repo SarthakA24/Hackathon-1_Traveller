@@ -11,7 +11,7 @@ public class SortingCities {
         // Call the method to convert the city name to upper case
         cityNames = sortingCities.convertToUpperCase(cityNames);
         // Call the method to sort the distance from Zurich arrays
-        sortingCities.sortBasedOnDistance(cityNames, distanceFromZurich);
+        distanceFromZurich = sortingCities.sortBasedOnDistance(cityNames, distanceFromZurich);
         // Call the method city52KmFromZurich() and save the return value in a variable
         String city52KmAwayFromZurich = sortingCities.city52KmFromZurich(cityNames, distanceFromZurich);
         // Call the method cityGreaterThanOrEqualTo270KmFromZurich() to find the city greater than or equal to 270km from Zurich
@@ -63,7 +63,7 @@ public class SortingCities {
      * @param sortedCityNames          This is the array of city names that will be sorted based on the distance from Zurich.
      * @param sortedDistanceFromZurich This is the array that contains the distances from Zurich.
      */
-    public void sortBasedOnDistance(String[] sortedCityNames, int[] sortedDistanceFromZurich) {
+    public int[] sortBasedOnDistance(String[] sortedCityNames, int[] sortedDistanceFromZurich) {
         // Declare a temp variable for storing the value while swapping
         int tempDistance;
         String tempCityName;
@@ -82,6 +82,7 @@ public class SortingCities {
                 }
             }
         }
+        return sortedDistanceFromZurich;
     }
 
     // Create a method to find the city which is 52 kms from Zurich
