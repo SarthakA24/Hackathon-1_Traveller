@@ -6,6 +6,14 @@ public class SortingCities {
         // Declare the 2 arrays with city names and distances from Zurich
         String[] cityNames = {"Bern", "Lucerne", "Interlaken", "Grindelwald", "Engelberg", "Geneva", "Murren", "Basel", "Zermatt", "Jungfraujoch"};
         int[] distanceFromZurich = {138, 52, 118, 136, 85, 276, 103, 87, 214, 101};
+        // Print the original arrays of distance and city names
+        System.out.println("-------------------------------------");
+        System.out.println("City Names and Distance (Un-Sorted) -- ");
+        System.out.println("City Name || Distance from Zurich");
+        System.out.println("-------------------------------------");
+        for (int index = 0; index < distanceFromZurich.length; index++) {
+            System.out.println(cityNames[index] + ": " + distanceFromZurich[index] + " kms");
+        }
         // Create an object for the method sortBasedOnDistance()
         SortingCities sortingCities = new SortingCities();
         // Call the method to convert the city name to upper case
@@ -19,6 +27,7 @@ public class SortingCities {
         // Print the sorted distance and corresponding city names on the screen
         // Start a loop to iterate though the arrays and print them
         System.out.println("-------------------------------------");
+        System.out.println("Sorted City Names and Distance based on Distance (Smallest to Largest) -- ");
         System.out.println("City Name || Distance from Zurich");
         System.out.println("-------------------------------------");
         for (int index = 0; index < distanceFromZurich.length; index++) {
