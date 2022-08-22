@@ -58,4 +58,12 @@ public class SortingCitiesTest {
     public void cityGreaterThanOrEqualTo270KmFromZurichSuccess() {
         Assertions.assertEquals("Geneva", sortingCities.cityGreaterThanOrEqualTo270KmFromZurich(new String[]{"Bern", "Lucerne", "Interlaken", "Grindelwald", "Engelberg", "Geneva", "Murren", "Basel", "Zermatt", "Jungfraujoch"}, new int[]{138, 52, 118, 136, 85, 276, 103, 87, 214, 101}));
     }
+
+    // Test case for the method cityGreaterThanOrEqualTo270KmFromZurich to return null for incorrect inputs
+    @Test
+    public void cityGreaterThanOrEqualTo270KmFromZurichFailure() {
+        Assertions.assertNull(sortingCities.cityGreaterThanOrEqualTo270KmFromZurich(null, new int[]{0}));
+        Assertions.assertNull(sortingCities.cityGreaterThanOrEqualTo270KmFromZurich(null, new int[]{}));
+        Assertions.assertNull(sortingCities.cityGreaterThanOrEqualTo270KmFromZurich(new String[]{"Bern", "Lucerne", "Interlaken", "Grindelwald", "Engelberg", "Geneva", "Murren", "Basel", "Zermatt", "Jungfraujoch"}, new int[]{}), "There is some error in logic");
+    }
 }
