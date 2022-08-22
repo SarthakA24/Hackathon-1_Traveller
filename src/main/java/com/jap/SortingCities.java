@@ -98,4 +98,10 @@ public class SortingCities {
         // Return the variable city52KmAwayFromZurich
         return city52KmAwayFromZurich;
     }
+
+    // Create a method to find the city which is more than 270km away from Zurich
+    public String cityGreaterThanOrEqualTo270KmFromZurich(String[] cityNames, int[] distanceFromZurich) {
+        String cityGreaterThanOrEqualTo270KmAwayFromZurich = "";
+        return cityGreaterThanOrEqualTo270KmAwayFromZurich;
+    }
 }
