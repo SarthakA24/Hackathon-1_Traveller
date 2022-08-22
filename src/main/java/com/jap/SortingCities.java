@@ -16,6 +16,8 @@ public class SortingCities {
         sortingCities.sortBasedOnDistance(cityNames, distanceFromZurich);
         // Call the method city52KmFromZurich() and save the return value in a variable
         String city52KmAwayFromZurich = sortingCities.city52KmFromZurich(cityNames, distanceFromZurich);
+        // Call the method cityGreaterThanOrEqualTo270KmFromZurich() to find the city greater than or equal to 270km from Zurich
+        String cityGreaterThanOrEqualTo270KmAwayFromZurich = sortingCities.cityGreaterThanOrEqualTo270KmFromZurich(cityNames, distanceFromZurich);
         // Print the sorted distance and corresponding city names on the screen
         // Start a loop to iterate though the arrays and print them
         System.out.println("-------------------------------------");
