@@ -62,6 +62,15 @@ public class SortingCities {
     }
 
     // Create a method to find the city which is 52 kms from Zurich
+
+    /**
+     * It takes in two arrays as input, one containing the names of cities and the other containing the distances of those
+     * cities from Zurich. It returns the name of the city which is 52 kms away from Zurich
+     *
+     * @param cityNames          An array of city names
+     * @param distanceFromZurich An array of distances of cities from Zurich
+     * @return The city name which is 52 kms away from Zurich
+     */
     public String city52KmFromZurich(String[] cityNames, int[] distanceFromZurich) {
         // Declare a variable to store the city name which is 52 kms form Zurich
         String city52KmAwayFromZurich = "";
