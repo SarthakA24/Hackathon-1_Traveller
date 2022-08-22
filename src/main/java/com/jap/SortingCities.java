@@ -1,5 +1,6 @@
 package com.jap;
 
+
 public class SortingCities {
     public static void main(String[] args) {
         // Declare the 2 arrays with city names and distances from Zurich
@@ -9,7 +10,7 @@ public class SortingCities {
         SortingCities sortingCities = new SortingCities();
         // Call the method to convert the city name to upper case
         cityNames = sortingCities.convertToUpperCase(cityNames);
-        // Call the method to sort the arrays
+        // Call the method to sort the distance from Zurich arrays
         sortingCities.sortBasedOnDistance(cityNames, distanceFromZurich);
         // Call the method city52KmFromZurich() and save the return value in a variable
         String city52KmAwayFromZurich = sortingCities.city52KmFromZurich(cityNames, distanceFromZurich);
@@ -51,7 +52,8 @@ public class SortingCities {
         }
     }
 
-    // Create a method to sort the arrays based on the distances
+
+    // Create a method to sort the city names based on the sorted distance array
 
     /**
      * The function takes two arrays as input, one containing the city names and the other containing the distance of the
