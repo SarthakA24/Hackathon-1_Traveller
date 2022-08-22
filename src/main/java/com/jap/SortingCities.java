@@ -16,6 +16,11 @@ public class SortingCities {
         sortingCities.sortBasedOnDistance(cityNames, distanceFromZurich);
         // Call the method city52KmFromZurich() and save the return value in a variable
         String city52KmAwayFromZurich = sortingCities.city52KmFromZurich(cityNames, distanceFromZurich);
+        // Print the sorted distance and corresponding city names on the screen
+        // Start a loop to iterate though the arrays and print them
+        for (int index = 0; index < distanceFromZurich.length; index++) {
+            System.out.println(cityNames[index] + ": " + distanceFromZurich[index] + " kms");
+        }
     }
 
     // Create a method to convert the city names in uppercase
