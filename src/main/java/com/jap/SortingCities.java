@@ -93,19 +93,22 @@ public class SortingCities {
      * @return The city name which is 52 kms away from Zurich
      */
     public String city52KmFromZurich(String[] cityNames, int[] distanceFromZurich) {
-
-        // Declare a variable to store the city name which is 52 kms form Zurich
-        String city52KmAwayFromZurich = "";
-        // Start a for loop to iterate thought the array and find the distance = 52km
-        for (int index = 0; index < cityNames.length; index++) {
-            // If the distance is 52 km, then return the corresponding city and break from the loop
-            if (distanceFromZurich[index] == 52) {
-                city52KmAwayFromZurich = cityNames[index];
-                break;
+        if (cityNames == null || distanceFromZurich.length <= 1) {
+            return null;
+        } else {
+            // Declare a variable to store the city name which is 52 kms form Zurich
+            String city52KmAwayFromZurich = "";
+            // Start a for loop to iterate thought the array and find the distance = 52km
+            for (int index = 0; index < cityNames.length; index++) {
+                // If the distance is 52 km, then return the corresponding city and break from the loop
+                if (distanceFromZurich[index] == 52) {
+                    city52KmAwayFromZurich = cityNames[index];
+                    break;
+                }
             }
+            // Return the variable city52KmAwayFromZurich
+            return city52KmAwayFromZurich;
         }
-        // Return the variable city52KmAwayFromZurich
-        return city52KmAwayFromZurich;
     }
 
     // Create a method to find the city which is more than 270km away from Zurich
