@@ -8,7 +8,7 @@ public class SortingCities {
         // Create an object for the method sortBasedOnDistance()
         SortingCities sortingCities = new SortingCities();
         // Call the method to convert the city name to upper case
-        sortingCities.convertToUpperCase(cityNames);
+        cityNames = sortingCities.convertToUpperCase(cityNames);
         // Call the method to sort the arrays
         sortingCities.sortBasedOnDistance(cityNames, distanceFromZurich);
         // Call the method city52KmFromZurich() and save the return value in a variable
@@ -39,11 +39,12 @@ public class SortingCities {
      *
      * @param cityNames This is the array that we want to convert to upper case.
      */
-    public void convertToUpperCase(String[] cityNames) {
+    public String[] convertToUpperCase(String[] cityNames) {
         // Start a loop to iterate though the array and convert each element to upper case
         for (int index = 0; index < cityNames.length; index++) {
             cityNames[index] = cityNames[index].toUpperCase();
         }
+        return cityNames;
     }
 
     // Create a method to sort the arrays based on the distances
