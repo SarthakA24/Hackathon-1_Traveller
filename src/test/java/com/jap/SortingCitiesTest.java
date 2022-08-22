@@ -3,16 +3,20 @@ package com.jap;
 import org.junit.After;
 import org.junit.Before;
 
-import static org.junit.Assert.*;
-
 public class SortingCitiesTest {
+    // Declare the object to call the method in SortingCities.java class
+    SortingCities sortingCities;
 
     @Before
-    public void setUp()  {
+    public void setUp() {
+        // Initialise the object to call the methods in SortingCities class
+        sortingCities = new SortingCities();
     }
 
     @After
-    public void tearDown()  {
+    public void tearDown() {
+        // Make the sortingCities object null
+        sortingCities = null;
     }
 
     //write all the test cases here
