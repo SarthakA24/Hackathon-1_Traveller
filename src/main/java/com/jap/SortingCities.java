@@ -18,9 +18,15 @@ public class SortingCities {
         String city52KmAwayFromZurich = sortingCities.city52KmFromZurich(cityNames, distanceFromZurich);
         // Print the sorted distance and corresponding city names on the screen
         // Start a loop to iterate though the arrays and print them
+        System.out.println("-------------------------------------");
+        System.out.println("City Name || Distance from Zurich");
+        System.out.println("-------------------------------------");
         for (int index = 0; index < distanceFromZurich.length; index++) {
             System.out.println(cityNames[index] + ": " + distanceFromZurich[index] + " kms");
         }
+        System.out.println("---------------------------------------------------------------");
+        // Print the city which is 52km away from Zurich
+        System.out.println("The city which is 52kms away from Zurich is: " + city52KmAwayFromZurich);
     }
 
     // Create a method to convert the city names in uppercase
