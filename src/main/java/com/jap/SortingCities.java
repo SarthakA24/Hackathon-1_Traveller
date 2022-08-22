@@ -12,6 +12,9 @@ public class SortingCities {
 
     // Create a method to sort the arrays based on the distances
     public void sortBasedOnDistance(String[] cityNames, int[] distanceFromZurich) {
+        // Declare 2 arrays to store the sorted arrays
+        String[] sortedCityNames = new String[cityNames.length];
+        int[] sortedDistanceFromZurich = new int[distanceFromZurich.length];
 
     }
 }
