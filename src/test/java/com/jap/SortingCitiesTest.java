@@ -66,4 +66,10 @@ public class SortingCitiesTest {
         Assertions.assertNull(sortingCities.cityGreaterThanOrEqualTo270KmFromZurich(null, new int[]{}));
         Assertions.assertNull(sortingCities.cityGreaterThanOrEqualTo270KmFromZurich(new String[]{"Bern", "Lucerne", "Interlaken", "Grindelwald", "Engelberg", "Geneva", "Murren", "Basel", "Zermatt", "Jungfraujoch"}, new int[]{}), "There is some error in logic");
     }
+
+    // Test case for the method sortBasedOnDistance() to check the sorting logic
+    @Test
+    public void sortBasedOnDistanceSuccess() {
+
+    }
 }
