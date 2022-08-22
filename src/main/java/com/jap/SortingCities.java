@@ -11,10 +11,24 @@ public class SortingCities {
     }
 
     // Create a method to sort the arrays based on the distances
-    public void sortBasedOnDistance(String[] cityNames, int[] distanceFromZurich) {
-        // Declare 2 arrays to store the sorted arrays
-        String[] sortedCityNames = new String[cityNames.length];
-        int[] sortedDistanceFromZurich = new int[distanceFromZurich.length];
-
+    public void sortBasedOnDistance(String[] sortedCityNames, int[] sortedDistanceFromZurich) {
+        // Declare a temp variable for storing the value while swapping
+        int tempDistance;
+        String tempCityName;
+        // Start the loop iterations te sort the array
+        for (int indexOne = 0; indexOne < sortedDistanceFromZurich.length; indexOne++) {
+            for (int indexTwo = 0; indexTwo < sortedDistanceFromZurich.length - indexOne - 1; indexTwo++) {
+                if (sortedDistanceFromZurich[indexTwo] > sortedDistanceFromZurich[indexTwo + 1]) {
+                    // Swap the numbers in distance array
+                    tempDistance = sortedDistanceFromZurich[indexTwo];
+                    sortedDistanceFromZurich[indexTwo] = sortedDistanceFromZurich[indexTwo + 1];
+                    sortedDistanceFromZurich[indexTwo + 1] = tempDistance;
+                    // Swap the values in city array
+                    tempCityName = sortedCityNames[indexTwo];
+                    sortedCityNames[indexTwo] = sortedCityNames[indexTwo + 1];
+                    sortedCityNames[indexTwo + 1] = tempCityName;
+                }
+            }
+        }
     }
 }
