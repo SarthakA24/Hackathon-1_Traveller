@@ -1,6 +1,8 @@
 package com.jap;
 
 
+import java.util.Arrays;
+
 public class SortingCities {
     public static void main(String[] args) {
         // Declare the 2 arrays with city names and distances from Zurich
@@ -23,7 +25,7 @@ public class SortingCities {
         // Call the method city52KmFromZurich() and save the return value in a variable
         String city52KmAwayFromZurich = sortingCities.city52KmFromZurich(cityNames, distanceFromZurich);
         // Call the method cityGreaterThanOrEqualTo270KmFromZurich() to find the city greater than or equal to 270km from Zurich
-        String cityGreaterThanOrEqualTo270KmAwayFromZurich = sortingCities.cityGreaterThanOrEqualTo270KmFromZurich(cityNames, distanceFromZurich);
+        String[] cityGreaterThanOrEqualTo270KmAwayFromZurich = sortingCities.cityGreaterThanOrEqualTo270KmFromZurich(cityNames, distanceFromZurich);
         // Print the sorted distance and corresponding city names on the screen
         // Start a loop to iterate though the arrays and print them
         System.out.println("-------------------------------------");
@@ -38,7 +40,7 @@ public class SortingCities {
         System.out.println("The city which is 52kms away from Zurich is: " + city52KmAwayFromZurich);
         System.out.println("---------------------------------------------------------------");
         // Print the city which is more than 270km Away from Zurich
-        System.out.println("The city which is more than 270kms away from Zurich is: " + cityGreaterThanOrEqualTo270KmAwayFromZurich);
+        System.out.println("The city/cities which is more than 270kms away from Zurich is: " + Arrays.toString(cityGreaterThanOrEqualTo270KmAwayFromZurich));
         System.out.println("---------------------------------------------------------------");
     }
 
@@ -132,17 +134,25 @@ public class SortingCities {
      * @param distanceFromZurich An array of integers that represent the distance of each city from Zurich.
      * @return The city name that is greater than or equal to 270km away from Zurich
      */
-    public String cityGreaterThanOrEqualTo270KmFromZurich(String[] cityNames, int[] distanceFromZurich) {
+    public String[] cityGreaterThanOrEqualTo270KmFromZurich(String[] cityNames, int[] distanceFromZurich) {
         if (cityNames == null || distanceFromZurich.length < 1) {
             return null;
         } else {
-            String cityGreaterThanOrEqualTo270KmAwayFromZurich = "";
+            // Check the number of values of distance above 270kms using a for loop and a count variable
+            int count = 0;
+            for (int fromZurich : distanceFromZurich) {
+                if (fromZurich >= 270) {
+                    count++;
+                }
+            }
+            int arraySize = 0;
+            String[] cityGreaterThanOrEqualTo270KmAwayFromZurich = new String[count];
             // Start a loop to iterate thought the array and find the distance more than or equal to 270km
             for (int index = 0; index < cityNames.length; index++) {
                 // If the distance is more than or equal to 270, store it in a variable and break out of the loop
                 if (distanceFromZurich[index] >= 270) {
-                    cityGreaterThanOrEqualTo270KmAwayFromZurich = cityNames[index];
-                    break;
+                    cityGreaterThanOrEqualTo270KmAwayFromZurich[arraySize] = cityNames[index];
+                    arraySize++;
                 }
             }
             // Return the variable cityGreaterThanOrEqualTo270KmAwayFromZurich

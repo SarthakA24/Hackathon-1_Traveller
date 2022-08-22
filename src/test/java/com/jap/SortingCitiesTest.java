@@ -56,7 +56,11 @@ public class SortingCitiesTest {
     // Test case for the method cityGreaterThanOrEqualTo270KmFromZurich to find the city with distance of more than 270kms from Zurich
     @Test
     public void cityGreaterThanOrEqualTo270KmFromZurichSuccess() {
-        Assertions.assertEquals("Geneva", sortingCities.cityGreaterThanOrEqualTo270KmFromZurich(new String[]{"Bern", "Lucerne", "Interlaken", "Grindelwald", "Engelberg", "Geneva", "Murren", "Basel", "Zermatt", "Jungfraujoch"}, new int[]{138, 52, 118, 136, 85, 276, 103, 87, 214, 101}), "There is some error in the logic");
+        String[] cityNames = {"Bern", "Lucerne", "Interlaken", "Grindelwald", "Engelberg", "Geneva", "Murren", "Basel", "Zermatt", "Jungfraujoch"};
+        int[] distanceFromZurich = {138, 52, 118, 136, 85, 276, 270, 87, 214, 280};
+        String[] expectedOutput = {"Geneva", "Murren", "Jungfraujoch"};
+        String[] actualOutput = sortingCities.cityGreaterThanOrEqualTo270KmFromZurich(cityNames, distanceFromZurich);
+        Assertions.assertArrayEquals(expectedOutput, actualOutput, "There is some error in the logic");
     }
 
     // Test case for the method cityGreaterThanOrEqualTo270KmFromZurich to return null for incorrect inputs
