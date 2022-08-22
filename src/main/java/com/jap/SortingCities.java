@@ -29,6 +29,10 @@ public class SortingCities {
         System.out.println("---------------------------------------------------------------");
         // Print the city which is 52km away from Zurich
         System.out.println("The city which is 52kms away from Zurich is: " + city52KmAwayFromZurich);
+        System.out.println("---------------------------------------------------------------");
+        // Print the city which is more than 270km Away from Zurich
+        System.out.println("The city which is more than 270kms away from Zurich is: " + cityGreaterThanOrEqualTo270KmAwayFromZurich);
+        System.out.println("---------------------------------------------------------------");
     }
 
     // Create a method to convert the city names in uppercase
