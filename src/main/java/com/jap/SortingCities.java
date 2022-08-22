@@ -93,6 +93,7 @@ public class SortingCities {
      * @return The city name which is 52 kms away from Zurich
      */
     public String city52KmFromZurich(String[] cityNames, int[] distanceFromZurich) {
+
         // Declare a variable to store the city name which is 52 kms form Zurich
         String city52KmAwayFromZurich = "";
         // Start a for loop to iterate thought the array and find the distance = 52km

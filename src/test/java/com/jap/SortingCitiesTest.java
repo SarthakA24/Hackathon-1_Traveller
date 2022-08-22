@@ -44,4 +44,12 @@ public class SortingCitiesTest {
         String actualOutput = sortingCities.city52KmFromZurich(new String[]{"Bern", "Lucerne", "Interlaken", "Grindelwald", "Engelberg", "Geneva", "Murren", "Basel", "Zermatt", "Jungfraujoch"}, new int[]{138, 52, 118, 136, 85, 276, 103, 87, 214, 101});
         Assertions.assertEquals(expectedOutput, actualOutput, "There is some error in the logic");
     }
+
+    // Test case for the method city52KmFromZurich to return null for incorrect inputs
+    @Test
+    public void city52KmFromZurichFailure() {
+        Assertions.assertNull(sortingCities.city52KmFromZurich(null, new int[]{0}), "There is some error in logic");
+        Assertions.assertNull(sortingCities.city52KmFromZurich(null, new int[]{138, 52, 118, 136, 85, 276, 103, 87, 214, 101}), "There is some error in logic");
+        Assertions.assertNull(sortingCities.city52KmFromZurich(new String[]{"Bern", "Lucerne", "Interlaken", "Grindelwald", "Engelberg", "Geneva", "Murren", "Basel", "Zermatt", "Jungfraujoch"}, new int[]{0}), "There is some error in logic");
+    }
 }
