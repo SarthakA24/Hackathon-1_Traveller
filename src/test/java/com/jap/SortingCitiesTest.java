@@ -33,7 +33,7 @@ public class SortingCitiesTest {
     // Test case for the method convertToUpperCase() to check the output for a null string
     @Test
     public void convertToUpperCaseFailure() {
-        String[] actualOutput = sortingCities.convertToUpperCase(new String[]{""});
+        String[] actualOutput = sortingCities.convertToUpperCase(null);
         Assertions.assertArrayEquals(null, actualOutput, "There is some error in the logic");
     }
 }
