@@ -15,6 +15,15 @@ public class SortingCities {
     }
 
     // Create a method to sort the arrays based on the distances
+
+    /**
+     * The function takes two arrays as input, one containing the city names and the other containing the distance of the
+     * cities from Zurich. It sorts the distance array in ascending order and swaps the values in the city array
+     * accordingly
+     *
+     * @param sortedCityNames          This is the array of city names that will be sorted based on the distance from Zurich.
+     * @param sortedDistanceFromZurich This is the array that contains the distances from Zurich.
+     */
     public void sortBasedOnDistance(String[] sortedCityNames, int[] sortedDistanceFromZurich) {
         // Declare a temp variable for storing the value while swapping
         int tempDistance;
