@@ -60,4 +60,12 @@ public class SortingCities {
             }
         }
     }
+
+    // Create a method to find the city which is 52 kms from Zurich
+    public String city52KmFromZurich(String[] cityNames) {
+        // Declare a variable to store the city name which is 52 kms form Zurich
+        String city52KmAwayFromZurich;
+        // Return the variable city52KmAwayFromZurich
+        return city52KmAwayFromZurich;
+    }
 }
