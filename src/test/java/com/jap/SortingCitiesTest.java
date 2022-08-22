@@ -83,9 +83,7 @@ public class SortingCitiesTest {
     @Test
     public void sortBasedOnDistanceFailure() {
         String[] cityNames = null;
-        int[] distanceFromZurich = {0};
-        sortingCities.sortBasedOnDistance(cityNames, distanceFromZurich);
+        sortingCities.sortBasedOnDistance(cityNames, new int[]{});
         Assertions.assertNull(cityNames);
-        // Assertions.assertEquals();
     }
 }
