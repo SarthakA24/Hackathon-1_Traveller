@@ -36,4 +36,12 @@ public class SortingCitiesTest {
         String[] actualOutput = sortingCities.convertToUpperCase(null);
         Assertions.assertArrayEquals(null, actualOutput, "There is some error in the logic");
     }
+
+    // Test case for the method city52KmFromZurich to find the city with distance of 52 km from Zurich
+    @Test
+    public void city52KmFromZurichSuccess() {
+        String expectedOutput = "Lucerne";
+        String actualOutput = sortingCities.city52KmFromZurich(new String[]{"Bern", "Lucerne", "Interlaken", "Grindelwald", "Engelberg", "Geneva", "Murren", "Basel", "Zermatt", "Jungfraujoch"}, new int[]{138, 52, 118, 136, 85, 276, 103, 87, 214, 101});
+        Assertions.assertEquals(expectedOutput, actualOutput, "There is some error in the logic");
+    }
 }
