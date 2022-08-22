@@ -10,6 +10,8 @@ public class SortingCities {
         int[] distanceFromZurich = {138, 52, 118, 136, 85, 276, 103, 87, 214, 101};
         // Create an object for the method sortBasedOnDistance()
         SortingCities sortingCities = new SortingCities();
+        // Call the method to convert the city name to upper case
+        sortingCities.convertToUpperCase(cityNames);
         // Call the method to sort the arrays
         sortingCities.sortBasedOnDistance(cityNames, distanceFromZurich);
     }
